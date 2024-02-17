@@ -1,7 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, InputMediaPhoto
 from aiogram.filters import CommandStart
-from keyboards.inline_kb import get_markup
+from keyboards.inline_kb import get_markup, get_markup_url
 from lexicon.lexicon import LEXICON, MEDIA
 
 user_router = Router()
@@ -37,6 +37,18 @@ async def how_wl_msg(callback: CallbackQuery):
         media=InputMediaPhoto(
             media=MEDIA['photo3'],
             caption=LEXICON['how_wl']
+        )
+    )
+
+
+@user_router.callback_query(F.data == 'links_btn')
+async def links_msg(callback: CallbackQuery):
+    markup = get_markup_url(2, 'Twitter', 'Discord', 'Website')
+    await callback.message.edit_media(
+        reply_markup=markup,
+        media=InputMediaPhoto(
+            media=MEDIA['photo3'],
+            caption=LEXICON['links']
         )
     )
 

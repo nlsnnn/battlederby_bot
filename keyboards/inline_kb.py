@@ -24,7 +24,7 @@ def get_markup(width, *args, **kwargs):
     return kb_builder.as_markup()
 
 
-def get_markup_url(*args):
+def get_markup_url(width, *args):
     kb_buidler = InlineKeyboardBuilder()
     buttons = []
 
@@ -35,5 +35,5 @@ def get_markup_url(*args):
                 url=LINKS[button]
             ))
 
-    kb_buidler.row(*buttons)
+    kb_buidler.row(*buttons, width=width)
     return kb_buidler.as_markup()
