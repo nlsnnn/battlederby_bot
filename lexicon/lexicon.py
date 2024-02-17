@@ -1,7 +1,9 @@
 LINKS: dict[str: str] = {
     'Twitter': 'https://twitter.com/battleDerbyGame',
     'Discord': 'https://discord.gg/battlederby',
-    'Website': 'https://tripleogames.com/'
+    'Website': 'https://tripleogames.com/',
+    'iOS': 'https://testflight.apple.com/join/rwaxgsbv',
+    'Android': 'https://play.google.com/store/apps/details?id=com.tripleogames.bd'
 }
 
 MEDIA: dict[str: str] = {
