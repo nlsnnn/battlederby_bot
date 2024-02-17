@@ -55,7 +55,7 @@ async def links_msg(callback: CallbackQuery):
 
 @user_router.callback_query(F.data == 'backward')
 async def backward(callback: CallbackQuery):
-    markup = get_markup(3, 'faq_btn', 'sneak_peeks_btn', 'links_btn', 'how_wl_btn')
+    markup = get_markup(3, 'faq_btn', 'links_btn', 'how_wl_btn')
     await callback.message.edit_media(
         reply_markup=markup,
         media=InputMediaPhoto(
