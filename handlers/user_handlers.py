@@ -9,7 +9,7 @@ user_router = Router()
 
 @user_router.message(CommandStart())
 async def start_cmd(message: Message):
-    markup = get_markup(3, 'faq_btn', 'sneak_peeks_btn', 'links_btn', 'how_wl_btn')
+    markup = get_markup(3, 'faq_btn', 'links_btn', 'how_wl_btn')
     await message.answer_photo(
         photo=MEDIA['photo1'],
         caption=LEXICON['/start'],

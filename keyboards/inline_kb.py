@@ -35,5 +35,11 @@ def get_markup_url(width, *args):
                 url=LINKS[button]
             ))
 
+    backward = InlineKeyboardButton(
+        text='❌',
+        callback_data='backward'
+    )
+
     kb_buidler.row(*buttons, width=width)
+    kb_buidler.row(backward)
     return kb_buidler.as_markup()
