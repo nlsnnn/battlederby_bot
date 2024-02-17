@@ -43,11 +43,11 @@ async def how_wl_msg(callback: CallbackQuery):
 
 @user_router.callback_query(F.data == 'links_btn')
 async def links_msg(callback: CallbackQuery):
-    markup = get_markup_url(2, 'Twitter', 'Discord', 'Website', 'iOS', 'Android')
+    markup = get_markup_url(3, 'Twitter', 'Discord', 'Website', 'iOS 📱', 'Android 📱')
     await callback.message.edit_media(
         reply_markup=markup,
         media=InputMediaPhoto(
-            media=MEDIA['photo3'],
+            media=MEDIA['photo4'],
             caption=LEXICON['links']
         )
     )
